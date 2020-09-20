@@ -1,6 +1,10 @@
-# Repository Creation
+# Introduction
 
-Given that Coursera course JARs are not available in Maven, the easiest way to manage this external JAR in Maven is to install the JAR after downloading it locally in Maven and then copying the install structure to your project directory. This coupled with tuning a few knobs in the Maven POM file allows us to use a project local directory as a repository. The command used was:
+This repo contains the source code which goes along with the Coursera course https://www.coursera.org/learn/cs-algorithms-theory-machines/. To build the project, simply run the command `mvnw install` from the base directory. This will automatically run all the tests and build the JAR. 
+
+# Local Repository Creation For Coursera dependencies
+
+Given that Coursera course JARs are not available in Maven, the easiest way to manage this external JAR in Maven is to install the JAR after downloading it locally in Maven and then copying the structure to your project directory. This coupled with tuning a few knobs in the Maven POM file allows us to use a project local directory as a repository. The command used was:
 
     mvn install:install-file -Dfile=/location/of/my.jar -DgroupId=coursera -DartifactId=algs4 -Dversion=1.0.0 -Dpackaging=jar -DcreateChecksum=true
     
