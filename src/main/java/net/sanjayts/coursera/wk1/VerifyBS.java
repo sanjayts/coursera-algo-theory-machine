@@ -48,7 +48,7 @@ public class VerifyBS {
     public static void main(String[] args) {
         String[] wordList = StdIn.readAllStrings();
         Arrays.sort(wordList, Comparator.naturalOrder());
-        VerifyCommon.testHarness(wordList, VerifyBS::binarySearch);
+        VerifyCommon.harnessForSearch(wordList, VerifyBS::binarySearch);
     }
 
 }

@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 public class VerifyCommon {
 
-    public static void testHarness(String[] wordList, SearchInterface fn) {
+    public static void harnessForSearch(String[] wordList, Searcher fn) {
         int wordCount = wordList.length;
         long start = System.nanoTime();
         for (int i = 0; i < wordCount * 10; i++) {
@@ -17,6 +17,13 @@ public class VerifyCommon {
                 StdOut.println(randomKey);
             }
         }
+        long timeInNanos = System.nanoTime() - start;
+        StdOut.println("Time taken is " + TimeUnit.NANOSECONDS.toSeconds(timeInNanos) + " seconds");
+    }
+
+    public static void harnessForSort(String[] wordList, Sorter sorter) {
+        long start = System.nanoTime();
+        sorter.sort(wordList);
         long timeInNanos = System.nanoTime() - start;
         StdOut.println("Time taken is " + TimeUnit.NANOSECONDS.toSeconds(timeInNanos) + " seconds");
     }

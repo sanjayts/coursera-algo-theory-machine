@@ -32,7 +32,7 @@ public class VerifySS {
     }
 
     public static void main(String[] args) {
-        VerifyCommon.testHarness(StdIn.readAllStrings(), VerifySS::search);
+        VerifyCommon.harnessForSearch(StdIn.readAllStrings(), VerifySS::search);
     }
 
 }

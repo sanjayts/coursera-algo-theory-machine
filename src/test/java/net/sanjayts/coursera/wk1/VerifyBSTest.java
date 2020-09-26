@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class VerifyBSTest {
 
     @ParameterizedTest
-    @CsvFileSource(resources = "/binary_search.csv", numLinesToSkip = 1)
+    @CsvFileSource(resources = "/binary_search_test_input.csv", numLinesToSkip = 1)
     void binarySearch_shouldCorrectlySearchKey(Integer expectedIdx, String key, String words) {
         String[] wordList = words.split(",");
         Integer idx = VerifyBS.binarySearch(key, wordList);
